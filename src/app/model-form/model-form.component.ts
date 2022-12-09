@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Signup } from './signup';
+
+
+
 @Component({
   selector: 'model-form',
   templateUrl: './model-form.component.html',
@@ -7,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModelFormComponent implements OnInit {
 
+  model: Signup = new Signup();
   langs: string[] = [
     'English',
     'French',
@@ -19,7 +24,7 @@ export class ModelFormComponent implements OnInit {
   }
 
   onSubmit(value) {
-    console.log(value);
+    console.log(this.model);
   }
 
 }

@@ -6,7 +6,7 @@
           type="text"
           class="form-control"
           name="firstName"
-          ngModel>
+          [(ngModel)]="model.firstName">
       </div>
       <div class="form-group">
         <label>Last Name</label>
@@ -14,7 +14,7 @@
           type="text"
           class="form-control"
           name="lastName"
-          ngModel>
+          [(ngModel)]="model.lastName">
       </div>
     </fieldset>
     
@@ -24,7 +24,7 @@
         type="email"
         class="form-control"
         name="email"
-        ngModel>
+        [(ngModel)]="model.email">
     </div>
   
     <div class="form-group">
@@ -33,18 +33,18 @@
         type="password"
         class="form-control"
         name="password"
-        ngModel>
+        [(ngModel)]="model.password">
     </div>
     <div class="form-group">
       <label>Language</label>
       <select 
         class="form-control" 
         name="language"
-        ngModel>
+        [(ngModel)]="model.language">
         <option value="">Please select a language</option>
         <option
           *ngFor="let lang of langs"
-          value="lang">
+          [value]="lang">
           {{lang}}
         </option>
       </select>
