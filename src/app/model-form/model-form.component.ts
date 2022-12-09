@@ -18,4 +18,8 @@ export class ModelFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(value) {
+    console.log(value);
+  }
+
 }
