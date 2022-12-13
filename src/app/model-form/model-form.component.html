@@ -27,8 +27,10 @@
         [(ngModel)]="model.email"
         required
         pattern="[^ @]*@[^ @]*">
-    </div>
-  
+      </div>
+      <pre>Valid? {{ f.form.controls.email?.valid }}</pre>
+      <pre>Dirty? {{ f.form.controls.email?.dirty }}</pre>
+      <pre>Touched? {{ f.form.controls.email?.touched }}</pre>
     <div class="form-group">
       <label>Password</label>
       <input 
