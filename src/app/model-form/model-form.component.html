@@ -63,4 +63,9 @@
     <button type="submit" (click)="onSubmit(f)">Submit</button>
     <hr>
     <pre>{{ f.value | json }}</pre>
+    <div class="form-control-feedback"
+      *ngIf="email.errors && (email.dirty || email.touched)">
+      <p *ngIf="email.errors.required">Email is required</p>
+      <p *ngIf="email.errors.minlength">Email must contain at least the @ character</p>
+    </div>
   </form>
