@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { Signup } from './signup';
 
@@ -10,6 +10,8 @@ import { Signup } from './signup';
   styleUrls: ['./model-form.component.css']
 })
 export class ModelFormComponent implements OnInit {
+
+  @ViewChild('f') form: any;
 
   model: Signup = new Signup();
   langs: string[] = [
@@ -23,8 +25,11 @@ export class ModelFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(value) {
-    console.log(this.model);
+  onSubmit() {
+    if (this.form.valid) {
+      console.log("Form Submitted!");
+      this.form.reset();
+    }
   }
 
 }
